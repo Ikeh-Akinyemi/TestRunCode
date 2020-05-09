@@ -197,24 +197,22 @@ function patternBuilder2(height) {
  for (let n = 0; n < height; n++) {
    console.log(patternConstructor);
  }
-let mixedChar = '8923A';
+let mixedChar = '8923A';*/
 
-
+//Builds a  specific pattern of whatever grid size; let say like 8x8
 function patternBuilderr(length, height) {
-  let pattern = ' #', pattern2 = '# ';
+  let pattern = ' #', pattern2 = '# ', newHeight = height / 2;
+  if(height % 2 === 1) newHeight += 0.5;  
   for (let n = 1; n < length; n++) {
     pattern += ' #', pattern2 += '# ';
-  };
-  for (let n = 1; n <= height; n++) {
+  }
+  for (let n = 1; n <= newHeight; n++) {
     console.log(pattern);
-    if (n % 2 === 1 && n === height) {
-      break;
-    } else {
-      console.log(pattern2);
-    }
+    if (height % 2 === 1 && n === newHeight) break;
+    else console.log(pattern2);
   }
 }
-console.log(patternBuilderr(6, 6));*/
+console.log(patternBuilderr(8, 8));
 
 
 //Checks for number of times a character appeared in a string.
